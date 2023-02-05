@@ -1,0 +1,94 @@
+*, ::before, ::after {
+  box-sizing: border-box; }
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: LightCyan;
+  background-color: #e0e8ff;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 500; }
+  html .boldest, body .boldest {
+    font-weight: 900; }
+  @media screen and (max-width: 768px) {
+    html, body {
+      background: url(https://raw.githubusercontent.com/cmb347827/order-summary-component-main-github.io/main/pattern-background-mobile.svg) no-repeat fixed, #e0e8ff;
+      background-size: contain; } }
+  @media screen and (min-width: 769px) {
+    html, body {
+      background: url(https://raw.githubusercontent.com/cmb347827/order-summary-component-main-github.io/main/pattern-background-desktop.svg) no-repeat fixed, #e0e8ff;
+      background-size: contain; } }
+
+h1 {
+  margin: 15px 0;
+  color: Blue;
+  color: #1f2f56; }
+
+main {
+  overflow: auto;
+  width: 100%; }
+  main .container, main .max {
+    max-width: 375px;
+    margin: 10px auto; }
+  main .max {
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: Snow;
+    background-color: #fff; }
+    main .max p {
+      color: CornflowerBlue;
+      color: #7280a7; }
+    main .max span:nth-of-type(1) {
+      color: Blue;
+      color: #1f2f56; }
+    main .max span:nth-of-type(2) {
+      color: CornflowerBlue;
+      color: #7280a7; }
+    main .max .btn-primary {
+      border-radius: 10px;
+      margin: 15px 0 0 0;
+      background-color: Aqua;
+      background-color: #3829e0;
+      width: 360px; }
+      @media screen and (min-width: 1440px) {
+        main .max .btn-primary:hover {
+          background-color: CornflowerBlue;
+          background-color: #7280a7; } }
+    main .max .btn-link:nth-of-type(1) {
+      color: Aqua;
+      color: #3829e0; }
+      @media screen and (min-width: 1440px) {
+        main .max .btn-link:nth-of-type(1):hover {
+          color: CornflowerBlue;
+          color: #7280a7; } }
+    main .max .btn-link:nth-of-type(2) {
+      color: CornflowerBlue;
+      color: #7280a7; }
+      @media screen and (min-width: 1440px) {
+        main .max .btn-link:nth-of-type(2):hover {
+          color: Blue;
+          color: #1f2f56; } }
+  @media screen and (min-width: 576px) {
+    main .container {
+      max-width: 576px; } }
+  @media screen and (min-width: 768px) {
+    main .container {
+      max-width: 768px; } }
+  @media screen and (min-width: 992px) {
+    main .container {
+      max-width: 992px; } }
+  @media screen and (min-width: 1200px) {
+    main .container {
+      max-width: 1200px; } }
+  @media screen and (min-width: 1440px) {
+    main .container {
+      max-width: 1440px; } }
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center; }
+footer .attribution a {
+  color: #3e52a3; }
+
+/*# sourceMappingURL=order-summary-component-main.css.map */

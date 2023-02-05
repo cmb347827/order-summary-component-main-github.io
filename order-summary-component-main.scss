@@ -1,0 +1,153 @@
+$container__form-xs: 375;
+$container__form-sm: 576;
+$container__form-md: 768;
+$container__form-lg: 992;
+$container__form-xl: 1200;
+$container__form-xxl: 1440;
+
+$font-size: 16px;
+$container__form-md-plus : 769;
+
+$colors : (Pale blue: hsl(225, 100%, 94%), Bright blue: hsl(245, 75%, 52%), Very pale blue: hsl(225, 100%, 98%), Desaturated blue: hsl(224, 23%, 55%), Dark blue: hsl(223, 47%, 23%), White: #fff);
+$fallback-colors: (LightCyan Aqua Azure CornflowerBlue Blue Snow);
+
+@mixin bg-color($color,$fallback-color){
+    background-color: $fallback-color;
+    background-color: $color;
+}
+@mixin font-color($color,$fallback-color){
+    color: $fallback-color;
+	color: $color;
+}
+@mixin width($grid-size){
+    max-width: $grid-size * 1px;
+}
+
+@mixin border-radius($radius){
+    border-radius: $radius;
+}
+@mixin margin($args...){
+    margin: $args;
+}
+@mixin padding($args...){
+    padding: $args;
+}
+@mixin font-weight($weight){
+    font-weight: $weight;
+}
+
+*,::before,::after{
+	box-sizing:border-box;
+}
+html, body{
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+	@include bg-color(map-get($colors, Pale blue), nth($fallback-colors, 1));
+	font-family: 'Red Hat Display', sans-serif;
+	@include font-weight(500);
+	.boldest{
+	    @include font-weight(900);
+	}
+	@media screen and (max-width: $container__form-md * 1px){
+	    background: url(https://raw.githubusercontent.com/cmb347827/order-summary-component-main-github.io/main/pattern-background-mobile.svg)no-repeat fixed, hsl(225, 100%, 94%);
+		background-size: contain;
+	}
+	@media screen and (min-width: $container__form-md-plus * 1px){ 
+	    background: url(https://raw.githubusercontent.com/cmb347827/order-summary-component-main-github.io/main/pattern-background-desktop.svg)no-repeat fixed, hsl(225, 100%, 94%);
+		background-size: contain;
+	}
+}
+
+h1{
+    @include margin(15px 0);
+	@include font-color(map-get($colors, Dark blue), nth($fallback-colors, 5));
+}
+
+main{
+	overflow: auto;
+	width: 100%;
+	
+	.container .row{
+	    //overflow: auto;
+	}
+	.container,.max{
+	    @include width($container__form-xs);
+		@include margin(10px auto);
+	}
+	.max{ 
+	    overflow: hidden;
+	    @include border-radius(15px);
+	    //z-index: 999;
+		@include bg-color(map-get($colors, White), nth($fallback-colors, 6));
+		p{
+		    @include font-color(map-get($colors, Desaturated blue), nth($fallback-colors, 4));
+		}
+		span:nth-of-type(1){
+		    @include font-color(map-get($colors, Dark blue), nth($fallback-colors, 5));
+		}
+		span:nth-of-type(2){
+		    @include font-color(map-get($colors, Desaturated blue), nth($fallback-colors, 4));
+		}
+		.btn-primary{
+		    @include border-radius(10px);
+			@include margin(15px 0 0 0);
+			@include bg-color(map-get($colors, Bright blue), nth($fallback-colors, 2));
+			width: 360px;
+			@media screen and (min-width: $container__form-xxl * 1px){ 
+			    &:hover{
+			        @include bg-color(map-get($colors, Desaturated blue), nth($fallback-colors, 4));
+				}
+			}
+		}
+		.btn-link:nth-of-type(1){
+		    @include font-color(map-get($colors, Bright blue), nth($fallback-colors, 2));
+			@media screen and (min-width: $container__form-xxl * 1px){ 
+			    &:hover{
+			        @include font-color(map-get($colors, Desaturated blue), nth($fallback-colors, 4));
+				}
+			}
+		}
+		.btn-link:nth-of-type(2){
+		    @include font-color(map-get($colors, Desaturated blue), nth($fallback-colors, 4));
+			@media screen and (min-width: $container__form-xxl * 1px){ 
+			    &:hover{
+			        @include font-color(map-get($colors, Dark blue), nth($fallback-colors, 5));
+				}
+			}
+		}
+	}
+	
+	
+    @media screen and (min-width: $container__form-sm * 1px){ 
+	    .container{
+	        @include width($container__form-sm);
+		}
+    }
+  
+	@media screen and (min-width: $container__form-md * 1px){ 
+	    .container{
+	        @include width($container__form-md);
+		}
+    }
+	@media screen and (min-width: $container__form-lg * 1px){ 
+	    .container{
+	        @include width($container__form-lg);
+		}
+    }
+	@media screen and (min-width: $container__form-xl * 1px){ 
+	    .container{
+	        @include width($container__form-xl);
+		}
+    }
+	@media screen and (min-width: $container__form-xxl * 1px){ 
+	    .container{
+	        @include width($container__form-xxl);
+		}
+    }
+	
+}
+footer{
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+}
