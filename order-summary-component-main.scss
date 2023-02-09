@@ -71,7 +71,7 @@ main{
 	.container .row{
 	    //overflow: auto;
 	}
-	.container,.max{
+	.container{
 	    @include width($container__form-xs);
 		@include margin(10px auto);
 	}
@@ -117,34 +117,6 @@ main{
 			}
 		}
 	}
-	
-	
-    @media screen and (min-width: $container__form-sm * 1px){ 
-	    .container{
-	        @include width($container__form-sm);
-		}
-    }
-  
-	@media screen and (min-width: $container__form-md * 1px){ 
-	    .container{
-	        @include width($container__form-md);
-		}
-    }
-	@media screen and (min-width: $container__form-lg * 1px){ 
-	    .container{
-	        @include width($container__form-lg);
-		}
-    }
-	@media screen and (min-width: $container__form-xl * 1px){ 
-	    .container{
-	        @include width($container__form-xl);
-		}
-    }
-	@media screen and (min-width: $container__form-xxl * 1px){ 
-	    .container{
-	        @include width($container__form-xxl);
-		}
-    }
 	
 }
 footer{
